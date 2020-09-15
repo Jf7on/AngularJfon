@@ -1,0 +1,58 @@
+[
+    {
+        "id": "0",
+        "nombre": "Queen",
+        "acercaDe": "Banda británica comformada por Freddie Mercury, Brian May, Roger Taylor, John Deacon",
+        "album": "Innuendo",
+        "urlBanda": "queen1.JPG",
+        "urlAlbum": "queen2.JPG"
+    },
+    {
+        "id": "1",
+        "nombre": "Pink Floyd",
+        "acercaDe": "Banda británica comformada por Syd Barrett, Nick Mason, Roger Waters, Richard Wright",
+        "album": "The Wall",
+        "urlBanda": "pinkFloyd1.JPG",
+        "urlAlbum": "pinkFloyd2.JPG"
+    },
+    {
+        "id": "2",
+        "nombre": "Led Zeppelin",
+        "acercaDe": "Banda británica comformada por Robert Plant, Jimmy Page, John Paul Jones, John Bonham",
+        "album": "Led Zeppelin",
+        "urlBanda": "led1.JPG",
+        "urlAlbum": "led2.JPG"
+    },
+    {
+        "id": "3",
+        "nombre": "Black Sabbath",
+        "acercaDe": "Banda británica comformada por Tony Iommi, Bill Ward, Geezer Butler, Ozzy Osbourne",
+        "album": "Black Sabbath",
+        "urlBanda": "black1.JPG",
+        "urlAlbum": "black2.JPG"
+    },
+    {
+        "id": "4",
+        "nombre": "The Beatles",
+        "acercaDe": "Banda británica comformada por John Lennon, Paul McCartney, George Harrison, Ringo Starr",
+        "album": "Abbey Road",
+        "urlBanda": "beatles1.JPG",
+        "urlAlbum": "beatles2.JPG"
+    },
+    {
+        "id": "5",
+        "nombre": "Rolling Stones",
+        "acercaDe": "Banda británica comformada por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts, Ian Stewart",
+        "album": "The Rolling Stones",
+        "urlBanda": "rolling1.JPG",
+        "urlAlbum": "rolling2.JPG"
+    },
+    {
+        "id": "6",
+        "nombre": "The Police",
+        "acercaDe": "Banda británica comformada por Sting, Andy Summers, Stewart Copeland",
+        "album": "Greatest Hits",
+        "urlBanda": "police1.JPG",
+        "urlAlbum": "police2.JPG"
+    }
+]

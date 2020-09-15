@@ -1,0 +1,76 @@
+<section>
+    <form [formGroup]="fg" (ngSubmit)="agregar(fg.controls['nombreBanda'].value, fg.controls['nombreAlbum'].value)">
+        <div class="container-content col-md-12">
+            <div class="col-md-3">
+                <h3>Componente Principal</h3>
+                <div>
+                    <a [routerLink]="['lista-bandas']">Ruteo componente Secundario</a>
+                    <details>
+                        <app-secundario (listaBandas)="cargarLista($event)"></app-secundario>
+                    </details>
+                </div>
+                <hr class="mb-2">
+                <div class="form-group">
+                    <label for="nombreBanda">Nombre Banda </label>
+                    <input type="text" class="form-control" id="nombreBanda" [formControl]="fg.controls['nombreBanda']">
+                    <div *ngIf="fg.controls['nombreBanda'].hasError('required')"
+                        [ngStyle]="{'color': 'red', 'font-size':'12px'}">Nombre Banda requerido!</div>
+                    <div class="requerido" *ngIf="fg.controls['nombreBanda'].hasError('longiIncorrecta')">Longitud
+                        nombre incorrecta</div>
+                    <div class="requerido" *ngIf="nombreBandaIncorrecto">Nombre de Banda incorrecto!</div>
+                </div>
+                <hr class="mb-2">
+                <div class="form-group">
+                    <label for="nombreAlbum">Nombre Album </label><br>
+                    <input type="text" id="url" [formControl]="fg.controls['nombreAlbum']">
+                    <div class="requerido" *ngIf="fg.controls['nombreAlbum'].hasError('required')">Nombre Album
+                        requerido!
+                    </div>
+                    <div class="requerido" *ngIf="nombreAlbumIncorrecto">Nombre de albúm incorrecto!</div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary" *ngIf="fg">Agregar</button>
+                <hr class="mb-2">
+            </div>
+            <div class="container-content" *ngIf="bandasAgregadas.length > 0">
+                <div class="column">
+                    <div class="col-md-6 offset-md-3">
+                        <h4>
+                            Bandas Agregadas
+                        </h4>
+                        <div class="card card-outline-secondary">
+                            <div class="">
+                                <div class="card-body">
+                                    <div class="panel-block" *ngFor="let bandaBus of bandasAgregadas">
+                                        <div class="row">
+                                            <span class="titulos">{{ bandaBus.nombre }} </span><br>
+                                        </div>
+                                        <div class="row">
+                                            <span class="titulos"> Detalle: <span>{{ bandaBus.acercaDe }}</span></span>
+                                        </div>
+                                        <div class="row">
+                                            <img src="assets/imagenes/{{ bandaBus.urlBanda }}" alt=""><br>
+                                        </div>
+                                        <div class="row">
+                                            <span class="titulos">Album: {{ bandaBus.album }}</span><br>
+                                        </div>
+                                        <div class="row">
+                                            <img src="assets/imagenes/{{ bandaBus.urlAlbum }}" alt="">
+                                        </div>
+                                        <hr class="mb-1">
+                                        <div>
+                                            <a href="#" (click)="bandaRock.voteUp()"><i class="material-icons md-18">thumb_up</i></a>
+                                            <a href="#" (click)="bandaRock.voteDown()"><i class="material-icons md-18">thumb_down</i></a>
+                                            {{ bandaRock.votes }}
+                                        </div>
+                                        <hr class="mb-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

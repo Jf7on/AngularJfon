@@ -1,0 +1,9 @@
+<section class="secundario">
+    <h3>Componente Secundario</h3>
+    <h4>Lista de Bandas y Albumes disponibles</h4>
+    <ul>
+        <li *ngFor="let banda of modeloBanda.listaBandas"> <span class="banda">{{ banda.nombre }}</span> (
+            <span class="album">{{ banda.album }}</span>)</li>
+    </ul>
+    <div ng-load callback="enviarLista(modeloBanda.listaBandas)"></div>
+</section>
